@@ -1,0 +1,7 @@
+@Output()
+<br>
+<ul>
+  <li *ngFor="let item of dataSource">
+    {{ item }} <button (click)="delete(item)">Delete</button>
+  </li>
+</ul>

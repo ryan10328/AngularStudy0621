@@ -1,0 +1,32 @@
+樣式繫結 - NgStyle
+<br>
+<span [ngStyle]="{'background-color': isYellow ? 'yellow': 'green'}">
+  Single CSS property
+</span>
+<br><br>
+<span [ngStyle]="{'background-color': isYellow ? 'yellow': 'green', 'text-decoration': isYellow ? 'line-through': ''}">
+  Multiple CSS properties
+</span>
+<br>
+<input type="range" [(ngModel)]="spanWidth" />
+<br>
+<svg [ngStyle]="{'background-color': isYellow ? 'yellow': 'green', 'width.px': spanWidth * 5}">
+</svg>
+<br>
+<hr> 樣式繫結 - NgClass
+<br>
+<span [ngClass]="'yellow deleted'">
+  CSS Class - String
+</span>
+<br>
+<span [ngClass]="['yellow','deleted']">
+  CSS Class - Array
+</span>
+<br>
+<span [ngClass]="{'yellow': true, 'deleted': false}">
+  CSS Class - Object
+</span>
+<br>
+<span [ngClass]="{'yellow deleted': true }">
+  CSS Class - Object 2
+</span>
