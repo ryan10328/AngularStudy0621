@@ -1,6 +1,8 @@
+import { JohnCenaModule } from './john-cena/john-cena.module';
+import { HelloComponent } from './john-cena/hello/hello.component';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -18,9 +20,11 @@ import { OutputDemoComponent } from './output-demo/output-demo.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    JohnCenaModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
